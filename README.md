@@ -1,4 +1,4 @@
-# Tick_tac_tow
+# Rock_paper_sicssors
 
 Command-Line Rock-Paper-Scissors Game
 Implement the first version of the Rock-Paper-Scissors game as a command-line
