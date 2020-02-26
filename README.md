@@ -1,4 +1,4 @@
-# Rock_paper_sicssors
+# Rock_paper_scissors
 
 Command-Line Rock-Paper-Scissors Game
 Implement the first version of the Rock-Paper-Scissors game as a command-line
