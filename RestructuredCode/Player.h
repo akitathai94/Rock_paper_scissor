@@ -2,11 +2,13 @@
 #define PLAYER_RPS
 #include "OPTION.h"
 class Player {
-    private:
-        OPTION choice;
     public:
+    	Player();
         void set__choice(OPTION user_choice);
         OPTION get__choice();
+
+    private:
+        OPTION choice;
 };
 
 #endif
