@@ -1,13 +1,13 @@
-#ifndef PLAYERS_RPS
-#define PLAYERS_RPS
+#ifndef PLAYER_RPS
+#define PLAYER_RPS
 #include <iostream>
 #include "Options.h"
 using namespace std;
 
-class Players {
+class Player {
 
 	public:
-		Players(); // default constructor
+		Player(); // default constructor
 
 		// accessors
 		int get_current_score() { return current_score; }
