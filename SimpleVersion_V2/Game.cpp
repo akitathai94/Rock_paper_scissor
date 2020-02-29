@@ -8,7 +8,6 @@ Game :: Game(int max_rounds){
     no_of_player_wins = 0;
     no_of_computer_wins = 0;
     totalRounds = max_rounds;
-    srand(time(0));
 }
 
 int Game ::get_current_round_no() {

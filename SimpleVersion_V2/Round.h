@@ -4,7 +4,6 @@
 
 #ifndef TESTPROGRAM_ROUND_H
 #define TESTPROGRAM_ROUND_H
-
 #include <iostream>
 #include "OPTIONS.h"
 #include "GameResult.h"

@@ -8,13 +8,13 @@ using namespace std;
 
 int main()
 {
-    Game g(5);
-    int choice = 0;
+    Game g(20);
     GAME_RESULT winner;
     cout << "Choices" << endl;
     cout << "0 = Rock" << endl;
     cout << "1 = Paper" << endl;
     cout << "2 = Scissor" << endl;
+
     for(int i = 0; i < 5; i++)
     {
 
@@ -29,6 +29,7 @@ int main()
     }
 
     cout << "The final result of the game is" << endl;
+
     cout << g.getFinalGameWinner();
 
     return 0;
