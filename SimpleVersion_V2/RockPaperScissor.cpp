@@ -17,8 +17,9 @@ int main()
     cout << "2 = Scissor" << endl;
     for(int i = 0; i < 5; i++)
     {
-        g.startRound();
-        winner = g.getCurrentRoundWinner();
+
+        OPTIONS var = g.getHumanChoice();
+        winner = g.getCurrentRoundWinner(var);
         cout << "You chose: " << g.getCurrentRoundPlayerChoice() << endl << "The computer chose: " << g.getCurrentRoundComputerChoice() << endl;
 
         cout << winner << endl;

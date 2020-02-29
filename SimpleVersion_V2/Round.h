@@ -22,8 +22,6 @@ public:
     OPTIONS get_player_choice();                // return the choice made by the player
     OPTIONS get_computer_choice();              // return the choice made by the computer
     GAME_RESULT getWinner();                    // get the winner of the current round
-    OPTIONS getHumanChoice();                   // Code to get human choice
-    OPTIONS getComputerChoice();                // generate the computer's choice
 private:
     OPTIONS playerChoice, computerChoice;       // store the two choices
 };
