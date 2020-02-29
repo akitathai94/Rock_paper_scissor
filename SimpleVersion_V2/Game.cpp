@@ -47,3 +47,7 @@ GAME_RESULT Game :: getFinalGameWinner(){
 
     return GAME_RESULT :: DRAW;
 }
+
+OPTIONS Game :: getCurrentRoundComputerChoice(){
+    return rounds[current_round-1].get_computer_choice();
+}

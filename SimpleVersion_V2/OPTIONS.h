@@ -4,6 +4,7 @@
 using namespace std;
 
 enum OPTIONS{
+        // Same reason as GameResult class
             ROCK, PAPER, SCISSOR
         };
 

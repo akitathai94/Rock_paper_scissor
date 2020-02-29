@@ -25,9 +25,6 @@ OPTIONS Round ::get_player_choice(){
     return playerChoice;
 }
 GAME_RESULT Round ::getWinner() {
-    // -1 if computer is winner
-    // 0 if draw
-    // 1 if player is winner
     switch(computerChoice)
     {
         case OPTIONS::ROCK :    if(playerChoice == OPTIONS::SCISSOR) return GAME_RESULT::COMPUTER_WON;

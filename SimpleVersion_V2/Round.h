@@ -12,14 +12,17 @@ using namespace std;
 
 class Round {
 public:
-    Round(OPTIONS , OPTIONS );
-    void set_player_choice(OPTIONS );
-    void set_computer_choice(OPTIONS choice);
-    OPTIONS get_player_choice();
-    OPTIONS get_computer_choice();
-    GAME_RESULT getWinner();
+    /*
+     * A round has two choices and it decided who won that round, it also stores the two choices
+     */
+    Round(OPTIONS , OPTIONS );                  // Set the choices for both player and computer
+    void set_player_choice(OPTIONS );           // update the player choice if needed
+    void set_computer_choice(OPTIONS choice);   // update the computer choice if needed
+    OPTIONS get_player_choice();                // return the choice made by the player
+    OPTIONS get_computer_choice();              // return the choice made by the computer
+    GAME_RESULT getWinner();                    // get the winner of the current round
 private:
-    OPTIONS playerChoice, computerChoice;
+    OPTIONS playerChoice, computerChoice;       // store the two choices
 };
 
 

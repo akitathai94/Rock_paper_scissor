@@ -9,6 +9,7 @@
 using namespace std;
 
 enum GAME_RESULT{
+    // This class is used so that we can restrict the game results to 3 options and not use int for representing game result
     PLAYER_WON, COMPUTER_WON, DRAW
 };
 
