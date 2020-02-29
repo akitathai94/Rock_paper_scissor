@@ -8,6 +8,7 @@ Round :: Round(OPTIONS pCHoice, OPTIONS cChoice) {
     playerChoice = pCHoice;
     computerChoice = cChoice;
 }
+Round :: Round(){}
 
 void Round ::set_player_choice(OPTIONS choice) {
     playerChoice =choice;
@@ -41,4 +42,21 @@ GAME_RESULT Round ::getWinner() {
 
     }
     return GAME_RESULT::DRAW;
+}
+OPTIONS Round ::getHumanChoice() {
+    int choice;
+    cout << "Enter your choice: ";
+    cin >> choice;
+    OPTIONS var;
+    if(choice == 0)
+        var = OPTIONS::ROCK;
+    else if(choice == 1)
+        var = OPTIONS::PAPER;
+    else if(choice == 2)
+        var = OPTIONS::SCISSOR;
+
+    return var;
+}
+OPTIONS Round ::getComputerChoice() {
+    return static_cast<OPTIONS>(rand()%3);
 }

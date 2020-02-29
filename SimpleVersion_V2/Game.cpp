@@ -5,7 +5,6 @@
 #include "Game.h"
 
 Game :: Game(int max_rounds){
-    current_round = 0;
     no_of_player_wins = 0;
     no_of_computer_wins = 0;
     totalRounds = max_rounds;
@@ -13,19 +12,17 @@ Game :: Game(int max_rounds){
 }
 
 int Game ::get_current_round_no() {
-    return current_round;
+    return rounds.size();
 }
-
-GAME_RESULT Game ::getCurrentRoundWinner(OPTIONS player_choice) {
-
-    OPTIONS computer_choice = generateComputerChoice();
-
-    Round r(player_choice, computer_choice);
-
+void Game :: startRound(){
+    Round r;
+    r.set_computer_choice(r.getComputerChoice());
+    r.set_player_choice(r.getHumanChoice());
     rounds.push_back(r);
-    current_round++;
-    GAME_RESULT g = r.getWinner();
+}
+GAME_RESULT Game ::getCurrentRoundWinner() {
 
+    GAME_RESULT g = rounds[rounds.size()-1].getWinner();
     switch(g)
     {
         case GAME_RESULT::PLAYER_WON : no_of_player_wins++; break;
@@ -34,9 +31,6 @@ GAME_RESULT Game ::getCurrentRoundWinner(OPTIONS player_choice) {
     return g;
 }
 
-OPTIONS Game ::generateComputerChoice() {
-    return static_cast<OPTIONS>(rand()%3);
-}
 
 GAME_RESULT Game :: getFinalGameWinner(){
     if(no_of_computer_wins > no_of_player_wins)
@@ -49,19 +43,8 @@ GAME_RESULT Game :: getFinalGameWinner(){
 }
 
 OPTIONS Game :: getCurrentRoundComputerChoice(){
-    return rounds[current_round-1].get_computer_choice();
+    return rounds[rounds.size()-1].get_computer_choice();
 }
-OPTIONS Game :: getHumanChoice(){
-    int choice;
-    cout << "Enter your choice: ";
-    cin >> choice;
-    OPTIONS var;
-    if(choice == 0)
-        var = OPTIONS::ROCK;
-    else if(choice == 1)
-        var = OPTIONS::PAPER;
-    else if(choice == 2)
-        var = OPTIONS::SCISSOR;
-
-    return var;
+OPTIONS Game :: getCurrentRoundPlayerChoice(){
+    return rounds[rounds.size()-1].get_player_choice();
 }
