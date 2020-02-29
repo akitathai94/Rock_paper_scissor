@@ -5,110 +5,142 @@
 
 // default constructor 
 Game::Game() {
-    Human human_player = new Human();
-    Computer computer_player = new Computer();
-    int number_of_rounds_to_play = MAX_ROUNDS_IN_GAME; // default value
-    int current_round_number = -1; // default value
+    human_player = new Human();
+    computer_player = new Computer();
+    number_of_rounds_to_play = MAX_ROUNDS_IN_GAME; // default value
+    current_round_number = -1; // default value
 }
 
 // parameterized constructor
 // parameter specifies number of rounds to play in the game.
-Game::Game(int rounds) {
-    Human human_player = new Human();
-    Computer computer_player = new Computer();
-    int number_of_rounds_to_play = rounds; // custom value
-    int current_round_number = -1; // default value   
+Game::Game(Human h_player, Computer c_player, int rounds = MAX_ROUNDS_IN_GAME) {
+    human_player = h_player;
+    computer_player = c_player;
+    number_of_rounds_to_play = rounds; // use custom value if provided
+    current_round_number = -1; // default value
 }
 
 // mutators
 void Game::set_number_of_rounds_to_play(int rounds) {
     number_of_rounds_to_play = rounds;
 }
+
 void Game::set_current_round_number(int round_num) {
-    current_round_number = round_num
+    current_round_number = round_num;
 }
 
 // functions
-void Game::play_a_round(); // TODO
-void Game::play_a_game();  // TODO
+void Game::play_a_round() {
+    OPTIONS human_choice = human_player.read_choice();
+    OPTIONS computer_choice = computer_player.make_choice();
+    decide_round_winner(); // update the scores
+    update_number_of_rounds(); /// update the round numbers
+    set_current_round_number(get_current_round_number() + 1);
+}
+
+void Game::play_a_game() {
+    // start with zero.
+    set_current_round_number(0);
+    human_player.set_current_round_number(0);
+    computer_player.set_current_round_number(0);
+
+    while(get_current_round_number() < get_number_of_rounds_to_play()) {
+        play_a_round();
+    }
+
+    decide_game_winner(); // done with all the rounds, so announce the winner.
+}
 
 
 // helper functions
-void Game::decide_round_winner();  // TODO
-void Game::update_number_of_rounds();  // TODO
-void Game::decide_game_winner();  // TODO
+// OPTIONS::ROCK, PAPER, SCISSORS, DEFAULT_CHOICE
+void Game::decide_round_winner() {
 
-////////////////////////////////////////
-////////////////////////////////////////
-////////////////////////////////////////
-////////////////////////////////////////
-/*
-Game :: Game(int total_rounds){
-    no_of_rounds = total_rounds;
-    user_wins_count = 0;
-    computer_wins_count = 0;
-    current_round_no = 0;
-    srand(time(0));
-}
-
-int Game :: getRoundWinner(OPTIONS userChoice)
-{
-    // -1 if computer won
-    //  0 if draw
-    //  1 if user won
-    current_round_computer_choice = getComputerChoice();
-    int x = compareChoices(current_round_computer_choice, userChoice);
-    switch (x)
-    {
-        case -1:    computer_wins_count++;
-            break;
-        case 1:     user_wins_count++;
-            break;
-        default:
-            break;
+    OPTION h_choice, c_choice;
+    h_choice = human_player.get_current_choice();
+    c_choice = computer_player.get_current_choice();
+    
+    if ((h_choice == OPTIONS::DEFAULT_CHOICE) || (c_choice == OPTIONS::DEFAULT_CHOICE)) {
+        cout << "Either you, or the computer, failed to make a choice from rock, paper & scissors. This round will not count towards the score." << endl;
+        return; // return without updating the scores.
     }
-    current_round_no++;
-    return x;
-}
 
-int Game :: getGameWinner()
-{
-    // -1 if computer won
-    //  0 if draw
-    //  1 if user won
-    if(user_wins_count > computer_wins_count)
-        return 1;
-    else if(computer_wins_count > user_wins_count)
-        return -1;
-    return 0;
-}
+    cout << "You entered " << h_choice << ", and the computer entered " << c_choice << endl;
 
-OPTIONS Game :: getComputerChoice()
-{
-    // return the choice made by computer
-    return static_cast<OPTIONS>(rand()%3);
-}
-int Game :: compareChoices(const OPTIONS choice1, const OPTIONS choice2)
-{
-    // -1 if choice1 is winner
-    // 0 if draw
-    // 1 if choice2 is winner
-    switch(choice1)
+    switch(c_choice)
     {
-        case OPTIONS::ROCK :    if(choice2 == OPTIONS::SCISSOR) return -1;
-                                else if(choice2==OPTIONS::PAPER) return 1;
-                                else return 0;
-                                break;
-        case OPTIONS::SCISSOR : if(choice2 == OPTIONS::PAPER) return -1;
-                                else if(choice2==OPTIONS::ROCK) return 1;
-                                else return 0;
-                                break;                      
-        case OPTIONS::PAPER : if(choice2 == OPTIONS::ROCK) return -1;
-                                else if(choice2==OPTIONS::SCISSOR) return 1;
-                                else return 0;
-                                break; 
-            
+        case OPTIONS::ROCK:
+            if (h_choice == OPTIONS::SCISSORS) {
+                cout << "Computer won this round!" << endl;
+                computer_player.set_current_score(get_current_score() + 1);
+                return;
+            }
+            else if (h_choice == OPTIONS::PAPER) {
+                cout << "You won this round!" << endl;
+                human_player.set_current_score(get_current_score() + 1);
+                return;
+            }
+            else {
+                cout << "Draw!" << endl;
+                return;
+            }
+            break;
+
+        case OPTIONS::PAPER:
+            if (h_choice == OPTIONS::ROCK) {
+                cout << "Computer won this round!" << endl;
+                computer_player.set_current_score(get_current_score() + 1);
+                return;
+            }
+
+            else if (h_choice == OPTIONS::SCISSORS) {
+                cout << "You won this round!" << endl;
+                human_player.set_current_score(get_current_score() + 1);
+                return;
+            }
+            else {
+                cout << "Draw!" << endl;
+                return;
+            }
+            break;
+
+        case OPTIONS::SCISSORS:
+            if (h_choice == OPTIONS::PAPER) {
+                cout << "Computer won this round!" << endl;
+                computer_player.set_current_score(get_current_score() + 1);
+                return;
+            }
+
+            else if (h_choice == OPTIONS::ROCK) {
+                cout << "You won this round!" << endl;
+                human_player.set_current_score(get_current_score() + 1);
+                return;
+            }
+            else {
+                cout << "Draw!" << endl;
+                return;
+            }
+            break;
+        default: 
+                cout << "You or the computer did not make a choice." << endl;
+                return;    
     }
-    return 0;
+
 }
-*/
+void Game::update_number_of_rounds() {
+    human_player.set_number_of_rounds_played(get_number_of_rounds_played() + 1);
+    computer_player.set_number_of_rounds_played(get_number_of_rounds_played() + 1);
+}
+void Game::decide_game_winner() {
+    if (human_player.get_current_score() > computer_player.get_current_score()) {
+        cout << "You've won the game!!" << endl;
+    }
+
+    else if (human_player.get_current_score() == computer_player.get_current_score()) {
+        cout << "You and the computer have tied in the game!!" << endl;
+    }
+
+    else {
+        cout << "You've lost the game!! Better luck next time." << endl;
+    }
+}

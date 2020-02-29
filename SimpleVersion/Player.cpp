@@ -1,9 +1,9 @@
 #include "Player.h"
 
 Player::Player() {
-	set_current_score(-1);	// default score
-	set_number_of_rounds_played(-1);	// default number of rounds played
-	set_current_choice(OPTIONS::DEFAULT_CHOICE);
+	current_score = -1;	// default score
+	number_of_rounds_played = -1;	// default number of rounds played
+	current_choice = OPTIONS::DEFAULT_CHOICE;
 }
 
 void Player::set_current_score(int score) {

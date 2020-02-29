@@ -14,6 +14,7 @@ OPTIONS Human::read_choice() {
 
     cout << "Enter your choice: ";
     cin >> entered_choice;
+    
     OPTIONS var;
     
     switch(entered_choice)
@@ -36,4 +37,5 @@ OPTIONS Human::read_choice() {
     }
 
     Player::set_current_choice(var);
+    return var;
 }
