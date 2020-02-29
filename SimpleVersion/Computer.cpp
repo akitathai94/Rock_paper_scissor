@@ -6,10 +6,11 @@ Computer::Computer() : Player() {
 
 // choice making function
 OPTIONS Computer::make_choice() {
-    int generated_choice = -1;
+    // int generated_choice = -1;
 
     // use random number generator to populate the generated_choice. 
-    OPTIONS var;
+    OPTIONS generated_choice = static_cast<OPTIONS>(rand()%3);
+    /*OPTIONS var;
     
     switch(generated_choice)
     {
@@ -29,6 +30,9 @@ OPTIONS Computer::make_choice() {
     		var = OPTIONS::DEFAULT_CHOICE;
     		// break;
     }
-
+    
     Player::set_current_choice(var);
+    */
+
+    Player::set_current_choice(generated_choice);
 }
