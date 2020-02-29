@@ -3,12 +3,11 @@
 #include <iostream>
 using namespace std;
 
-enum OPTIONS{
-            ROCK, PAPER, SCISSOR
-        };
+enum OPTIONS {
+            ROCK, PAPER, SCISSOR, DEFAULT_CHOICE
+};
 
-inline ostream& operator<<(ostream& ostr, const OPTIONS opt)
-{
+inline ostream& operator<<(ostream& ostr, const OPTIONS opt) {
     switch(opt)
     {
         case OPTIONS::ROCK : ostr <<"ROCK"; break;
