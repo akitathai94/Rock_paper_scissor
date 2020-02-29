@@ -51,3 +51,17 @@ GAME_RESULT Game :: getFinalGameWinner(){
 OPTIONS Game :: getCurrentRoundComputerChoice(){
     return rounds[current_round-1].get_computer_choice();
 }
+OPTIONS Game :: getHumanChoice(){
+    int choice;
+    cout << "Enter your choice: ";
+    cin >> choice;
+    OPTIONS var;
+    if(choice == 0)
+        var = OPTIONS::ROCK;
+    else if(choice == 1)
+        var = OPTIONS::PAPER;
+    else if(choice == 2)
+        var = OPTIONS::SCISSOR;
+
+    return var;
+}

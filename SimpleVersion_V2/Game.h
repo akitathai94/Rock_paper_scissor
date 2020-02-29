@@ -19,7 +19,7 @@ class Game {
     int get_current_round_no();                     // get the round that is currently going on
     GAME_RESULT getFinalGameWinner();               // The winner of the total game
     OPTIONS getCurrentRoundComputerChoice();        // the choice that computer made in the current round
-
+    OPTIONS getHumanChoice();                       // Code to get human choice
     private:
     /*
      * A game consists of multiple rounds, and keeps track of the number of times each player won
@@ -27,6 +27,7 @@ class Game {
      */
     int totalRounds;                                // Total number of rounds in a game
     OPTIONS generateComputerChoice();               // generate the computer's choice
+
     int no_of_player_wins, no_of_computer_wins;     // keep track of who won how many rounds
     int current_round;                              // The number of current round
     vector<Round> rounds;                           // Stores history of all previous rounds
