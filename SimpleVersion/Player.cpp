@@ -1,7 +1,7 @@
 #include "Player.h"
 
 Player::Player() {
-	current_score = -1;	// default score
+	current_score = 0;	// default score
 	number_of_rounds_played = -1;	// default number of rounds played
 	current_choice = OPTIONS::DEFAULT_CHOICE;
 }
