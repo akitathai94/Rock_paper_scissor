@@ -22,6 +22,7 @@ int main(){
             case OPTIONS::SCISSORS : scissor++; break;
         }
     }
+    // Check to see if the the number of times each is chosen is random or not
     cout << "ROCK = " << rock << endl;
     cout << "PAPER = " << paper << endl;
     cout << "SCISSOR =" << scissor << endl;
