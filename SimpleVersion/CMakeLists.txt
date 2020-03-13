@@ -3,4 +3,4 @@ project(testProgram)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(testProgram PlayerClassTester.cpp Player.cpp)
+add_executable(testProgram RockPaperScissor.cpp Player.cpp Game.cpp Round.cpp)
