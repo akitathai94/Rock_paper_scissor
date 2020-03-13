@@ -1,27 +1,42 @@
 #ifndef PLAYER_RPS
 #define PLAYER_RPS
 #include <iostream>
-#include "Options.h"
+#include <string>
+#include "OPTIONS.h"
+#include "Chooser.h"
+#include "ChooserFactory.h"
+#include <ctime>
+#include <cstdlib>
+
 using namespace std;
 
-class Player {
+//class Player {
+//
+//	public:
+//		Player(); // default constructor
+//
+//		// accessors
+//		int get_current_score() { return current_score; }
+//		int get_number_of_rounds_played()  { return number_of_rounds_played; }
+//		OPTIONS get_current_choice()  { return current_choice; }
+//
+//		// mutators
+//		void set_current_score(int);
+//		void set_number_of_rounds_played(int);
+//		void set_current_choice(OPTIONS);
+//
+//	private:
+//		int current_score;
+//		int number_of_rounds_played;
+//		OPTIONS current_choice;
+//};
 
-	public:
-		Player(); // default constructor
+class Player{
+public:
+    Player(string which); // constructor
+    OPTIONS get_choice();   // delegates task to chooser
+private:
+    Chooser *ChoiceMaker;
 
-		// accessors
-		int get_current_score() { return current_score; }
-		int get_number_of_rounds_played()  { return number_of_rounds_played; }
-		OPTIONS get_current_choice()  { return current_choice; }
-
-		// mutators
-		void set_current_score(int);
-		void set_number_of_rounds_played(int);
-		void set_current_choice(OPTIONS);
-
-	private:
-		int current_score;
-		int number_of_rounds_played;
-		OPTIONS current_choice;
 };
 #endif
