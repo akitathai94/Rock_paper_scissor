@@ -27,16 +27,16 @@ OPTIONS Round ::get_player_choice(){
 GAME_RESULT Round ::getWinner() {
     switch(computerChoice)
     {
-        case OPTIONS::ROCK :    if(playerChoice == OPTIONS::SCISSOR) return GAME_RESULT::COMPUTER_WON;
+        case OPTIONS::ROCK :    if(playerChoice == OPTIONS::SCISSORS) return GAME_RESULT::COMPUTER_WON;
                                 else if(playerChoice==OPTIONS::PAPER) return GAME_RESULT::PLAYER_WON;
                                 else return GAME_RESULT::DRAW;
 
-        case OPTIONS::SCISSOR : if(playerChoice == OPTIONS::PAPER) return GAME_RESULT::COMPUTER_WON;
+        case OPTIONS::SCISSORS : if(playerChoice == OPTIONS::PAPER) return GAME_RESULT::COMPUTER_WON;
                                 else if(playerChoice==OPTIONS::ROCK) return GAME_RESULT::PLAYER_WON;
                                 else return GAME_RESULT::DRAW;
 
         case OPTIONS::PAPER :   if(playerChoice == OPTIONS::ROCK) return GAME_RESULT::COMPUTER_WON;
-                                else if(playerChoice==OPTIONS::SCISSOR) return GAME_RESULT::PLAYER_WON;
+                                else if(playerChoice==OPTIONS::SCISSORS) return GAME_RESULT::PLAYER_WON;
                                 else return GAME_RESULT::DRAW;
 
     }
