@@ -35,7 +35,7 @@ using namespace std;
 
 class Player{
 public:
-    Player(string which); // constructor
+    Player(CHOOSER_TYPE which); // constructor
     //OPTIONS get_choice();   // delegates task to chooser
     OPTIONS get_choice(vector<Round>); // delegate task to MLChooser
 private:

@@ -16,7 +16,7 @@
 //	this->current_choice = choice;
 //}
 
-Player :: Player(string which){
+Player :: Player(CHOOSER_TYPE which){
 
     ChooserFactory c;
     ChoiceMaker = c.make_chooser(which);
