@@ -6,20 +6,20 @@
 
 string enum_to_string(OPTIONS choice);
 OPTIONS string_to_enum(string code);
-string get_four_choices(vector<Round> rounds, int pos);
+string get_N_choices(vector<Round> rounds, int pos, int no_of_iteration);
 
 //OPTIONS MLChooser ::make_choice(){
 //    return static_cast<OPTIONS>(rand()%3);
 //}
 
-OPTIONS MLChooser ::make_choice(vector<Round> rounds) {
+OPTIONS MLChooser ::make_choice(vector<Round> rounds, int N) {
     // if there isn't enough data to make ml prediction
-    if(rounds.size() < 3)
+    if(rounds.size() < ((N/2) + 1))
         return static_cast<OPTIONS>(rand()%3);
 
-    update_ml_algorithm(rounds); // to add the pattern for the last round
+    update_ml_algorithm(rounds, N); // to add the pattern for the last round
 
-    string current_game_pattern = get_four_choices(rounds, rounds.size() - 2);
+    string current_game_pattern = get_N_choices(rounds, rounds.size() - (N/2), N/2);
 
     string curr_s = current_game_pattern + "S";
     string curr_r = current_game_pattern + "R";
@@ -53,9 +53,9 @@ OPTIONS MLChooser ::make_choice(vector<Round> rounds) {
     return string_to_enum("P");
 }
 
-void MLChooser ::update_ml_algorithm(vector<Round> rounds) {
+void MLChooser ::update_ml_algorithm(vector<Round> rounds, int N) {
 
-    string current_pattern = get_four_choices(rounds, rounds.size() - 3);
+    string current_pattern = get_N_choices(rounds, rounds.size() - ((N/2) + 1), N/2);
     current_pattern += enum_to_string(rounds[rounds.size()-1].get_player_choice());
 
     if(past_patterns_and_freq.find(current_pattern) == past_patterns_and_freq.end()){
@@ -79,11 +79,11 @@ OPTIONS string_to_enum(string code){
     else                    return OPTIONS :: SCISSORS;
 }
 
-string get_four_choices(vector<Round> rounds, int pos){
+string get_N_choices(vector<Round> rounds, int pos, int no_of_iteration){
 
     string current_game_pattern;
     OPTIONS var;
-    for(int i = 0; i < 2; i++){
+    for(int i = 0; i < no_of_iteration; i++){
         var = rounds[pos+i].get_player_choice();
         current_game_pattern += enum_to_string(var);
         var = rounds[pos+i].get_computer_choice();

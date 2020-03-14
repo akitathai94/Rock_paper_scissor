@@ -10,6 +10,6 @@
 class Chooser{
 public:
     //virtual OPTIONS make_choice() = 0;
-    virtual OPTIONS make_choice(vector<Round> rounds) = 0;
+    virtual OPTIONS make_choice(vector<Round> rounds, int N) = 0;
 };
 #endif //TESTPROGRAM_CHOOSER_H

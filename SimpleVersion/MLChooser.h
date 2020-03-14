@@ -15,11 +15,11 @@ class MLChooser : public Chooser
 {
 public:
     //OPTIONS make_choice();
-    OPTIONS make_choice(vector<Round> );
+    OPTIONS make_choice(vector<Round> , int N);
 
 private:
     unordered_map<string, int> past_patterns_and_freq;
-    void update_ml_algorithm(vector<Round> );
+    void update_ml_algorithm(vector<Round> , int);
 };
 
 #endif //TESTPROGRAM_MLCHOOSER_H

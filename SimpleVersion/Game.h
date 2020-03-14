@@ -53,7 +53,7 @@ using namespace std;
 
 class Game{
 public:
-    Game(int, CHOOSER_TYPE, CHOOSER_TYPE);          // constructor to initialize the number of games, human algo, computer algo
+    Game(int, CHOOSER_TYPE, CHOOSER_TYPE, int);          // constructor to initialize the number of games, human algo, computer algo
     GAME_RESULT play_a_round();             // to play a single round and return the winner
 
     GAME_RESULT get_game_winner();      //  return the winner of the final game
@@ -76,5 +76,6 @@ private:
 
     void print_results(ostream& ,OPTIONS , OPTIONS , GAME_RESULT , int);
     string computer_algo;
+    int N;
 };
 #endif

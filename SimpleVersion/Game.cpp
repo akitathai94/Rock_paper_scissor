@@ -147,13 +147,14 @@
 
 
 
-Game ::Game(int total_rounds, CHOOSER_TYPE humanAlgo, CHOOSER_TYPE compAlgo) {
+Game ::Game(int total_rounds, CHOOSER_TYPE humanAlgo, CHOOSER_TYPE compAlgo, int n) {
 
     human = new Player(humanAlgo);
     computer = new Player(compAlgo);
     computer_algo = compAlgo;
     humanWins = computerWins = 0;
     totalRounds = total_rounds;
+    N = n;
 }
 
 GAME_RESULT Game ::get_game_winner() {
@@ -195,8 +196,8 @@ int Game ::get_current_human_score() {
 }
 
 GAME_RESULT Game::play_a_round() {
-    OPTIONS human_choice = human->get_choice(rounds);
-    OPTIONS computer_choice =computer->get_choice(rounds);
+    OPTIONS human_choice = human->get_choice(rounds, N);
+    OPTIONS computer_choice =computer->get_choice(rounds, N);
 
 
     Round r(human_choice, computer_choice);

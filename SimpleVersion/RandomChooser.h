@@ -12,7 +12,7 @@
 class RandomChooser : public Chooser
 {
 public:
-    OPTIONS make_choice(vector<Round> rounds){
+    OPTIONS make_choice(vector<Round> rounds, int N){
         return static_cast<OPTIONS>(rand()%3);
     }
 };

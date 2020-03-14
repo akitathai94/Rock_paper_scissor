@@ -27,6 +27,6 @@ Player :: Player(CHOOSER_TYPE which){
 //}
 
 
-OPTIONS Player ::get_choice(vector<Round> rounds) {
-    return ChoiceMaker->make_choice(rounds);
+OPTIONS Player ::get_choice(vector<Round> rounds, int N) {
+    return ChoiceMaker->make_choice(rounds, N);
 }

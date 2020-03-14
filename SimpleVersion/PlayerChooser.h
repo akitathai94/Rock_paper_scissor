@@ -11,7 +11,7 @@
 class PlayerChooser : public Chooser
 {
 public:
-    OPTIONS make_choice(vector<Round> rounds){
+    OPTIONS make_choice(vector<Round> rounds, int N){
         int choice;
         cout << "Enter your choice: ";
         cin >> choice;
