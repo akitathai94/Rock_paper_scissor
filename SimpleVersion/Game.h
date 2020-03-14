@@ -74,5 +74,6 @@ private:
     int totalRounds;
 
     void print_results(ostream& ,OPTIONS , OPTIONS , GAME_RESULT , int);
+    string computer_algo;
 };
 #endif

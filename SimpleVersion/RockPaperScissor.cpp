@@ -11,7 +11,7 @@ int main()
     cout << "1 = Paper" << endl;
     cout << "2 = Scissor" << endl;
 
-    Game g(10, "human", "random");
+    Game g(100, "random", "ml");
     GAME_RESULT winner = g.play_full_game();
 
     cout << endl << "Final Game Result:" << winner << endl << endl;
@@ -21,3 +21,4 @@ int main()
 
     return 0;
 }
+// ./myProgram r

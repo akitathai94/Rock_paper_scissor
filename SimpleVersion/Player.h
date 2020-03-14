@@ -2,8 +2,10 @@
 #define PLAYER_RPS
 #include <iostream>
 #include <string>
+#include <vector>
 #include "OPTIONS.h"
 #include "Chooser.h"
+#include "Round.h"
 #include "ChooserFactory.h"
 #include <ctime>
 #include <cstdlib>
@@ -34,7 +36,8 @@ using namespace std;
 class Player{
 public:
     Player(string which); // constructor
-    OPTIONS get_choice();   // delegates task to chooser
+    //OPTIONS get_choice();   // delegates task to chooser
+    OPTIONS get_choice(vector<Round>); // delegate task to MLChooser
 private:
     Chooser *ChoiceMaker;
 

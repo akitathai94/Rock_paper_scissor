@@ -22,6 +22,11 @@ Player :: Player(string which){
     ChoiceMaker = c.make_chooser(which);
 }
 
-OPTIONS Player ::get_choice() {
-    return ChoiceMaker->make_choice();
+//OPTIONS Player ::get_choice() {
+//    return ChoiceMaker->make_choice();
+//}
+
+
+OPTIONS Player ::get_choice(vector<Round> rounds) {
+    return ChoiceMaker->make_choice(rounds);
 }

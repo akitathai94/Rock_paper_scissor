@@ -6,8 +6,10 @@
 #define TESTPROGRAM_CHOOSER_H
 
 #include "OPTIONS.h"
+#include "Round.h"
 class Chooser{
 public:
-    virtual OPTIONS make_choice() = 0;
+    //virtual OPTIONS make_choice() = 0;
+    virtual OPTIONS make_choice(vector<Round> rounds) = 0;
 };
 #endif //TESTPROGRAM_CHOOSER_H

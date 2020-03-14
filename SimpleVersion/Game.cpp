@@ -150,6 +150,7 @@
 Game ::Game(int total_rounds, string humanAlgo, string compAlgo) {
     human = new Player(humanAlgo);
     computer = new Player(compAlgo);
+    computer_algo = compAlgo;
     humanWins = computerWins = 0;
     totalRounds = total_rounds;
 }
@@ -193,8 +194,10 @@ int Game ::get_current_human_score() {
 }
 
 GAME_RESULT Game::play_a_round() {
-    OPTIONS human_choice = human->get_choice();
-    OPTIONS computer_choice = computer->get_choice();
+    OPTIONS human_choice = human->get_choice(rounds);
+    OPTIONS computer_choice =computer->get_choice(rounds);
+
+
     Round r(human_choice, computer_choice);
     rounds.push_back(r);
 

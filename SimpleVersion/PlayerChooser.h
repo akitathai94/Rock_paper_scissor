@@ -6,10 +6,12 @@
 #define TESTPROGRAM_PLAYERCHOOSER_H
 
 #include "Chooser.h"
+#include "Round.h"
+#include <vector>
 class PlayerChooser : public Chooser
 {
 public:
-    OPTIONS make_choice(){
+    OPTIONS make_choice(vector<Round> rounds){
         int choice;
         cout << "Enter your choice: ";
         cin >> choice;

@@ -6,10 +6,13 @@
 #define TESTPROGRAM_RANDOMCHOOSER_H
 
 #include "Chooser.h"
+#include "Round.h"
+#include <vector>
+
 class RandomChooser : public Chooser
 {
 public:
-    OPTIONS make_choice(){
+    OPTIONS make_choice(vector<Round> rounds){
         return static_cast<OPTIONS>(rand()%3);
     }
 };
