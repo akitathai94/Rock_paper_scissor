@@ -9,6 +9,7 @@
 #include "Player.h"
 #include "GameResult.h"
 #include "Round.h"
+#include "ChooserType.h"
 using namespace std;
 
 //class Game {
@@ -52,7 +53,7 @@ using namespace std;
 
 class Game{
 public:
-    Game(int, string, string);          // constructor to initialize the number of games, human algo, computer algo
+    Game(int, CHOOSER_TYPE, CHOOSER_TYPE);          // constructor to initialize the number of games, human algo, computer algo
     GAME_RESULT play_a_round();             // to play a single round and return the winner
 
     GAME_RESULT get_game_winner();      //  return the winner of the final game

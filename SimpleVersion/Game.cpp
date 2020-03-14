@@ -147,7 +147,8 @@
 
 
 
-Game ::Game(int total_rounds, string humanAlgo, string compAlgo) {
+Game ::Game(int total_rounds, CHOOSER_TYPE humanAlgo, CHOOSER_TYPE compAlgo) {
+    
     human = new Player(humanAlgo);
     computer = new Player(compAlgo);
     computer_algo = compAlgo;

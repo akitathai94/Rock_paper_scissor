@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
     cout << "1 = Paper" << endl;
     cout << "2 = Scissor" << endl;
 
-    Game g(100, CHOOSER_TYPE::HUMAN, algorithm_type_specified);
+    Game g(100, CHOOSER_TYPE::RANDOM, algorithm_type_specified);
     GAME_RESULT winner = g.play_full_game();
 
     cout << endl << "Final Game Result:" << winner << endl << endl;
