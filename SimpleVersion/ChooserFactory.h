@@ -9,12 +9,14 @@
 #include "MLChooser.h"
 #include "RandomChooser.h"
 #include "PlayerChooser.h"
-class ChooserFactory{
+#include "ChooserType.h"
+
+class ChooserFactory {
 public:
-    Chooser *make_chooser(string which){
-        if (which == "random") return new RandomChooser();
-        else if (which == "ml") return new MLChooser();
-        else if(which == "human") return new PlayerChooser();
+    Chooser *make_chooser(CHOOSER_TYPE which){
+        if (which == CHOOSER_TYPE::RANDOM) return new RandomChooser();
+        else if (which == CHOOSER_TYPE::ML) return new MLChooser();
+        else if(which == CHOOSER_TYPE::HUMAN) return new PlayerChooser();
         else return new RandomChooser();
 
     };
