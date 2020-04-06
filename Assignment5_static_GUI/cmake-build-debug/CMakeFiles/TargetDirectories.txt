@@ -1,0 +1,3 @@
+/Users/prajjwalsinghal/CLionProjects/Assignment5_static_GUI/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/prajjwalsinghal/CLionProjects/Assignment5_static_GUI/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/prajjwalsinghal/CLionProjects/Assignment5_static_GUI/cmake-build-debug/CMakeFiles/Assignment5_static_GUI.dir
