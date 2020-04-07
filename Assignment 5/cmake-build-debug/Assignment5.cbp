@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Assignment5"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/prajjwalsinghal/Desktop/Assignment 5/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/prajjwalsinghal/Desktop/Assignment\ 5/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/prajjwalsinghal/Desktop/Assignment\ 5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/prajjwalsinghal/Desktop/Assignment\ 5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/prajjwalsinghal/Desktop/Assignment\ 5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/prajjwalsinghal/Desktop/Assignment 5/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/prajjwalsinghal/Desktop/Assignment\ 5/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/prajjwalsinghal/Desktop/Assignment\ 5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/prajjwalsinghal/Desktop/Assignment\ 5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/prajjwalsinghal/Desktop/Assignment\ 5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/prajjwalsinghal/Desktop/Assignment 5/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/prajjwalsinghal/Desktop/Assignment\ 5/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/prajjwalsinghal/Desktop/Assignment\ 5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/prajjwalsinghal/Desktop/Assignment\ 5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/prajjwalsinghal/Desktop/Assignment\ 5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Assignment5">
+				<Option output="/Users/prajjwalsinghal/Desktop/Assignment 5/cmake-build-debug/Assignment5.app/Contents/MacOS/Assignment5" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/prajjwalsinghal/Desktop/Assignment 5/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add option="-DWXUSINGDLL"/>
+					<Add option="-D__WXMAC__"/>
+					<Add option="-D__WXOSX__"/>
+					<Add option="-D__WXOSX_COCOA__"/>
+					<Add directory="/usr/local/lib/wx/include/osx_cocoa-unicode-3.0"/>
+					<Add directory="/usr/local/include/wx-3.0"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/prajjwalsinghal/Desktop/Assignment\ 5/cmake-build-debug/Makefile&quot;  VERBOSE=1 Assignment5"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/prajjwalsinghal/Desktop/Assignment\ 5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/prajjwalsinghal/Desktop/Assignment\ 5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/prajjwalsinghal/Desktop/Assignment\ 5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Assignment5/fast">
+				<Option output="/Users/prajjwalsinghal/Desktop/Assignment 5/cmake-build-debug/Assignment5.app/Contents/MacOS/Assignment5" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/prajjwalsinghal/Desktop/Assignment 5/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="0"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_FILE_OFFSET_BITS=64"/>
+					<Add option="-DWXUSINGDLL"/>
+					<Add option="-D__WXMAC__"/>
+					<Add option="-D__WXOSX__"/>
+					<Add option="-D__WXOSX_COCOA__"/>
+					<Add directory="/usr/local/lib/wx/include/osx_cocoa-unicode-3.0"/>
+					<Add directory="/usr/local/include/wx-3.0"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/prajjwalsinghal/Desktop/Assignment\ 5/cmake-build-debug/Makefile&quot;  VERBOSE=1 Assignment5/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/prajjwalsinghal/Desktop/Assignment\ 5/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/prajjwalsinghal/Desktop/Assignment\ 5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/prajjwalsinghal/Desktop/Assignment\ 5/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/GUI/Choice.cpp">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/GUI/Choice.h">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/GUI/ComputerChoicePanel.cpp">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/GUI/ComputerChoicePanel.h">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/GUI/DemoFrame.cpp">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/GUI/DemoFrame.h">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/GUI/HumanChoicePanel.cpp">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/GUI/HumanChoicePanel.h">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/GUI/MainApp.cpp">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/GUI/MainApp.h">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/GUI/RoundNumber.cpp">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/GUI/RoundNumber.h">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/GUI/StatisticsPanel.cpp">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/GUI/StatisticsPanel.h">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/GUI/WinnerPanel.cpp">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/GUI/WinnerPanel.h">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/Game/Game.cpp">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/Game/Game.h">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/Game/MLChooser.cpp">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/Game/MLChooser.h">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/Game/Player.cpp">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/Game/Player.h">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/Game/Round.cpp">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/Game/Round.h">
+			<Option target="Assignment5"/>
+		</Unit>
+		<Unit filename="/Users/prajjwalsinghal/Desktop/Assignment 5/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
